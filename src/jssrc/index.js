@@ -1,11 +1,19 @@
 import Vue from "vue";
 
-import me from "../components/me.vue";
+import userlogin from "./../components/user-login.vue";
 
 let param = {
     el:'.container',
     components:{
-            'me':me,
+            'user-login':userlogin,
         }
 }
-new Vue(param);
+let myvue = new Vue(param);
+
+//监听url
+window.onhashchange=function () {
+   if(window.location.hash = '#admin')
+       myvue.$children['0'].$data.isadmin = true;
+   else
+       myvue.$children['0'].$data.isadmin = false;
+}

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "b": "webpack -p",
-    "dev":"webpack-dev-server --inline  --hot --content-base ./src/webapp"
+    "dev": "webpack-dev-server --inline  --hot --content-base ./src/webapp"
   },
   "keywords": [
     "123456"
@@ -16,6 +16,7 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
+    "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "vue": "^2.4.4",
     "vue-loader": "^13.0.5",

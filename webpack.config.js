@@ -23,8 +23,9 @@ module.exports =
     module:{
         loaders:[
             {test:/\.js$/,loader:"babel-loader",query:{compact:true}},
-            // {test:/\.vue$/,loader:"babel-loader!vue-loader",exclude:"/node_modules/"},
-            {test:/\.vue$/,loader:"babel-loader!vue-loader", exclude: "/node_modules/"}
+            {test:/\.vue$/,loader:"babel-loader!vue-loader", exclude: "/node_modules/"},
+            {test:/\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,loader:"file-loader" }
+
             //这里肯定要加入n个loader 譬如vue-loader、babel-loader、css-loader等等
         ]
     },
