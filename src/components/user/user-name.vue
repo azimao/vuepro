@@ -24,7 +24,7 @@
         },
         methods:{
             userNameChange(){
-                this.$emit('updateUserName',this.username)
+                this.$emit('childChange','username',this.username)
             }
         }
     }

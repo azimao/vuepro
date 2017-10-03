@@ -24,7 +24,7 @@
         },
         methods:{
             userPasswordChange(){
-                this.$emit('updateUserPwd',this.password)
+                this.$emit('childChange','password',this.password)
             }
         }
     }

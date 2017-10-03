@@ -47,3 +47,4 @@ wondow.location   //获取当前url
 window.location.hash //获取设置页面标签值
 ```
 - v-if  v-else  //条件判断
+- v-for=" area in areas" v-bind="area.area_id"  //循环areas 绑定id
