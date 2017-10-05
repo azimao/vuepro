@@ -4,9 +4,10 @@
         <h2 class="text-center" v-else>用户登录</h2>
         <user-name placeholder="请输入你的用户名"></user-name>
         <user-password placeholder="请输入你的密码"></user-password>
+        <user-favs></user-favs>
         <user-area></user-area>
         <user-submit></user-submit>
-        <input v-on:click="show" type="button" value="测试父组件"/>
+        <!--<input v-on:click="show" type="button" value="测试父组件"/>-->
     </div>
 </template>
 
@@ -19,6 +20,7 @@
     import userpassword from './user/user-password.vue';
     import userarea from './user/user-area.vue';
     import usersubmit from './user/user-submit.vue';
+    import userfavs from './user/user-favs.vue';
 
     export default{
         //监测子组件
@@ -52,6 +54,7 @@
             'user-name': username,
             'user-password':userpassword,
             'user-area':userarea,
+            'user-favs':userfavs,
             'user-submit':usersubmit,
         }
     }
