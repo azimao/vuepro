@@ -3,9 +3,13 @@
         <h2 class="text-center" v-if="isadmin">管理员登录</h2>
         <h2 class="text-center" v-else>用户登录</h2>
         <user-name placeholder="请输入你的用户名"></user-name>
+        <a href="#"></a>
         <user-password placeholder="请输入你的密码"></user-password>
+        <a href="#"></a>
         <user-favs></user-favs>
+        <a href="#"></a>
         <user-area></user-area>
+        <br>
         <user-submit></user-submit>
         <!--<input v-on:click="show" type="button" value="测试父组件"/>-->
     </div>
@@ -13,6 +17,9 @@
 
 <style>
     @import "./../css/bootstrap.css";
+    #me{
+      height:300px;
+    }
 </style>
 
 <script>
