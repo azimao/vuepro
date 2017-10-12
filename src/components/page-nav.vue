@@ -20,7 +20,11 @@
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
+        <button class="btn"><a href="#/login">登录</a></button>
+        <button class="btn"><a href="#/news">新闻</a></button>
       </div>
+      <!-- <router-link :to="{ name: '/login', params: {} }">登录</router-link>
+      <router-link :to="{ name: '/new', params: {} }">新闻</router-link> -->
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
  </nav>
