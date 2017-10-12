@@ -3,14 +3,19 @@ import Vue from "vue";
 import userlogin from "./../components/user-login.vue";
 import pagenav from "./../components/page-nav.vue";
 import newslist from "./../components/news-list.vue";
+import newsdetail from "./../components/news-detail.vue";
 import VueRouter from "vue-router";
+import VueResource from "vue-resource";
 
 Vue.use(VueRouter);  //全局使用插件
+Vue.use(VueResource);  //全局使用插件
 
 
 const routes = [
-  {path:'/news',component:newslist},
-  {path:'/login',component:userlogin},
+  {path:'/',component:newslist},
+  {path:'/news',component:newslist,name:'newslist'},
+  {path:'/news/:newsid',component:newsdetail,name:':newsdetail'},
+  {path:'/login',component:userlogin,name:'userlogin'},
 ];
 
 Vue.component('page-nav', pagenav);  //全局模板
@@ -22,6 +27,19 @@ const routerConfig = new VueRouter({
 let param = {
     el:'.container',
     router:routerConfig,
+    mounted(){
+
+      this.$http.post('http://www.shixin_dev.net/Company/list/companyGroup',{com_id:'022169'},{emulateJSON:true})
+      .then(
+          function(res){
+            console.log(res.body)
+            // console.log(res.body.data)
+          },
+          function(res){
+
+          }
+      );
+    }
 }
 
 let myvue = new Vue(param);

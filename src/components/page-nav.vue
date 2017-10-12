@@ -30,7 +30,7 @@
  </nav>
 </template>
 <style>
-
+    @import "./../css/bootstrap.css";
 </style>
 <script>
 
