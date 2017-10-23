@@ -1,14 +1,27 @@
 import Vue from "vue";
 
-import userlogin from "./../components/user-login.vue";
+// import userlogin from "./../components/user-login.vue";
 import pagenav from "./../components/page-nav.vue";
-import newslist from "./../components/news-list.vue";
+// import newslist from "./../components/news-list.vue";
 import newsdetail from "./../components/news-detail.vue";
 import VueRouter from "vue-router";
 import VueResource from "vue-resource";
 
 Vue.use(VueRouter);  //全局使用插件
 Vue.use(VueResource);  //全局使用插件
+
+const userlogin=r=>{
+ require.ensure([],()=>{
+ r(require("./../components/user-login.vue"));
+ })
+
+ };
+ const newslist=b=>{
+ require.ensure([],()=>{
+ b(require("./../components/news-list.vue"));
+ })
+
+ };
 
 
 const routes = [
