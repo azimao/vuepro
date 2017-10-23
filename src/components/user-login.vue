@@ -11,7 +11,7 @@
         <user-area></user-area>
         <br>
         <user-submit></user-submit>
-        <!--<input v-on:click="show" type="button" value="测试父组件"/>-->
+        <input v-on:click="show" type="button" value="测试父组件"/>
     </div>
 </template>
 
