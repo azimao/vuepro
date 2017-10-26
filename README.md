@@ -48,3 +48,45 @@ window.location.hash //获取设置页面标签值
 ```
 - v-if  v-else  //条件判断
 - v-for=" area in areas" v-bind="area.area_id"  //循环areas 绑定id
+
+##### 异步加载
+```vue
+const userlogin=r=>{
+ require.ensure([],()=>{
+ r(require("./../components/user-login.vue"));
+ })
+
+ };
+ const newslist=b=>{
+ require.ensure([],()=>{
+ b(require("./../components/news-list.vue"));
+ })
+
+ };
+```
+
+##### 自定义插件格式 
+```vue
+        //自定义组件
+        Vue.directive('uname',{
+           bind(){
+               console.log('begin');
+           },
+            update(el,binding,vnode){
+               //业务在插件里
+               //binding.expression 获取到 showErrorLable
+/*                if(/\w{6,30}/.test(el.value)){
+                   vnode.context[binding.expression] = false;
+                }else {
+                    vnode.context[binding.expression] = true;
+                }*/
+
+                //业务在组件里
+                vnode.context[binding.expression]();  //调用组件函数
+
+                console.log(el);  //当前标签
+                console.log(binding); //标签各种属性值
+                console.log(vnode); //上线文对象
+            }
+        })
+```

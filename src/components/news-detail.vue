@@ -19,10 +19,11 @@
     export default{
         created()
         {
-            this.$http.get("http://localhost:9090/news.php?newsid="+this.$route.params.newsid)
+            this.$http.post("http://localhost/shixin_php/index.php/Company/vue/news",{newsid:this.$route.params.newsid},{emulateJSON:true})
                     .then(function(res){
                         this.newsdetail=res.body;
-                    },function(rs){})
+                    },function(rs){
+                    })
         },
         data(){
             return{

@@ -3,7 +3,9 @@
     <div class="news-list">
         <div class="row">
             <div class="page-header" v-for="news in newslist">
-                <h2><router-link :to="{ name: 'newsdetail', params: { newsid: news.newsid} }">{{news.title}}</router-link> <small>{{news.pubtime}}</small></h2>
+                <!--<h2><router-link :to="{ name: 'newsdetail', params: { newsid: news.newsid} }">{{news.title}}</router-link> <small>{{news.pubtime}}</small></h2>-->
+                <h2><router-link :to="{name:'newsdetail', params:{ newsid: news.newsid}}"> {{news.title}} </router-link> <small>{{news.pubtime}}</small></h2>
+
                 <p>
                     {{news.desc}}
                 </p>
