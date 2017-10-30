@@ -6,7 +6,7 @@
                  <!--v-uname="showErrorLable"-->
                 <input type="text" v-model="username"
                     v-uname="showLable"   class="form-control" v-on:change="userNameChange" :placeholder="placeholder">
-                <lable v-if="showErrorLable" class="label label-danger">用户名不合法</lable>
+
             </div>
         </div>
     </div>
