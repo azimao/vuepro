@@ -9,6 +9,12 @@
 
             </div>
         </div>
+        <div class="form-group">
+            <label   class="col-sm-2 control-label">测试:</label>
+            <div class="col-sm-10">
+                <azimao-test></azimao-test>
+            </div>
+        </div>
     </div>
 </template>
 
