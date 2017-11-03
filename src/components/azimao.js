@@ -43,9 +43,9 @@ export default {
                 //业务在组件里
                 vnode.context[binding.expression]();  //调用组件函数
 
-                console.log(el);  //当前标签
+/*                console.log(el);  //当前标签
                 console.log(binding); //标签各种属性值
-                console.log(vnode); //上线文对象
+                console.log(vnode); //上线文对象*/
             }
         })
     }
